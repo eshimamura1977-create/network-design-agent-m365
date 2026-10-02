@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "document_type": "required_network_requirement_fields",
+  "policy": {
+    "null_is_missing": true,
+    "empty_string_is_missing": true,
+    "empty_array_is_missing": false,
+    "value_unknown_must_create_issue": true,
+    "empty_array_rules": "sites・communications・platforms等の対象リストには工程別min_items=1を適用。open_issues/out_of_scopeは確認済み0件を許容。空欄と確認済み0件を確認記録で区別。",
+    "zero_and_false_are_valid": true,
+    "unknown_tokens": [
+      "未定",
+      "要確認",
+      "TBD",
+      "不明",
+      "未確認"
+    ]
+  },
+  "stage_requirements": {
+    "requirement_draft": [
+      "metadata.project_name",
+      "metadata.customer_name",
+      "scope.network_domains",
+      "scope.in_scope",
+      "scope.out_of_scope",
+      "sites",
+      "deliverables_required"
+    ],
+    "requirement_review": [
+      "metadata.owner",
+      "metadata.reviewer",
+      "current_environment.exists",
+      "sites",
+      "communications",
+      "availability.target_sla_percent",
+      "addressing.private_address_policy",
+      "segmentation.required_segments",
+      "routing.protocols",
+      "security.policy_model",
+      "operations.monitoring_required",
+      "migration.migration_required",
+      "open_issues"
+    ],
+    "basic_design_start": [
+      "metadata.status",
+      "scope.assumptions",
+      "scope.constraints",
+      "sites",
+      "communications",
+      "addressing",
+      "segmentation",
+      "routing",
+      "security",
+      "performance",
+      "availability",
+      "operations",
+      "deliverables_required"
+    ],
+    "detailed_design_start": [
+      "platforms",
+      "communications",
+      "operations.ntp_servers",
+      "operations.snmp_version"
+    ],
+    "config_generation": [
+      "platforms[*].vendor",
+      "platforms[*].model",
+      "platforms[*].software_name",
+      "platforms[*].software_version",
+      "sites[*].site_id",
+      "communications[*].communication_id",
+      "communications[*].action"
+    ]
+  },
+  "conditional": [
+    {
+      "when": "current_environment.exists == true",
+      "required": [
+        "current_environment.overview",
+        "current_environment.existing_documents"
+      ]
+    },
+    {
+      "when": "migration.migration_required == true",
+      "required": [
+        "migration.preferred_window",
+        "migration.allowable_downtime_minutes",
+        "migration.rollback_criteria"
+      ]
+    },
+    {
+      "when": "security.firewall_required == true",
+      "required": [
+        "communications",
+        "segmentation.security_zones"
+      ]
+    },
+    {
+      "when": "operations.syslog_required == true",
+      "required": [
+        "operations.log_retention_days",
+        "operations.ntp_servers"
+      ]
+    },
+    {
+      "when": "wireless.required == true",
+      "required": [
+        "wireless.ssids",
+        "wireless.authentication",
+        "wireless.coverage_requirements"
+      ]
+    },
+    {
+      "when": "availability.link_redundancy == true",
+      "required": [
+        "sites[*].backup_circuit.type",
+        "sites[*].backup_circuit.bandwidth_mbps"
+      ]
+    }
+  ],
+  "collection_constraints": {
+    "sites": {
+      "min_items": 1
+    },
+    "communications": {
+      "min_items": 1,
+      "when": "通信設計対象あり"
+    },
+    "platforms": {
+      "min_items": 1,
+      "when": "config_generation"
+    },
+    "open_issues": {
+      "min_items": 0
+    },
+    "scope.out_of_scope": {
+      "min_items": 0
+    }
+  },
+  "interpretation": "既存NW要件入力YAMLへの意味上のルール。式文字列を自動実行する実装は含まない。共通モデルではfield_evidenceとissuesを用いる。",
+  "maintenance": {
+    "updated": "2026-10-01",
+    "status": "draft",
+    "change": "構文・参照・判定の修正。承認を意味しない。"
+  }
+}

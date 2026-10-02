@@ -1,0 +1,887 @@
+{
+  "version": "1.0",
+  "status": "draft",
+  "id_namespaces": {
+    "Q": "質問",
+    "FIELD": "入力項目定義",
+    "REQ": "案件要件"
+  },
+  "legacy_resolution": "旧REQはsource_fileとの組で解釈する。質問の回答を同番号FIELDへ結合しない。",
+  "questions": [
+    {
+      "question_id": "Q-001",
+      "legacy_id": "REQ-001",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A5",
+      "name": "案件名",
+      "legacy_yaml_path": "metadata.project_name",
+      "raw_target": "/question_answers/0/raw_value",
+      "normalized_section": "project",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-002",
+      "legacy_id": "REQ-002",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A6",
+      "name": "顧客・組織名",
+      "legacy_yaml_path": "metadata.customer_name",
+      "raw_target": "/question_answers/1/raw_value",
+      "normalized_section": "project",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-003",
+      "legacy_id": "REQ-003",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A7",
+      "name": "対象フェーズ",
+      "legacy_yaml_path": "scope.target_phase",
+      "raw_target": "/question_answers/2/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-004",
+      "legacy_id": "REQ-004",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A8",
+      "name": "希望稼働日",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/3/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-005",
+      "legacy_id": "REQ-005",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A9",
+      "name": "対象範囲",
+      "legacy_yaml_path": "scope.in_scope",
+      "raw_target": "/question_answers/4/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-006",
+      "legacy_id": "REQ-006",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A10",
+      "name": "現行構成の有無",
+      "legacy_yaml_path": "current_environment.exists",
+      "raw_target": "/question_answers/5/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-007",
+      "legacy_id": "REQ-007",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A11",
+      "name": "現行課題",
+      "legacy_yaml_path": "current_environment.issues",
+      "raw_target": "/question_answers/6/raw_value",
+      "normalized_section": "issues",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-008",
+      "legacy_id": "REQ-008",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A12",
+      "name": "拠点数",
+      "legacy_yaml_path": "sites",
+      "raw_target": "/question_answers/7/raw_value",
+      "normalized_section": "sites",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-009",
+      "legacy_id": "REQ-009",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A13",
+      "name": "利用者数",
+      "legacy_yaml_path": "sites[*].users_normal",
+      "raw_target": "/question_answers/8/raw_value",
+      "normalized_section": "sites",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-010",
+      "legacy_id": "REQ-010",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A14",
+      "name": "端末数",
+      "legacy_yaml_path": "sites[*].endpoints",
+      "raw_target": "/question_answers/9/raw_value",
+      "normalized_section": "sites",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-011",
+      "legacy_id": "REQ-011",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A15",
+      "name": "目標可用性",
+      "legacy_yaml_path": "availability.target_sla_percent",
+      "raw_target": "/question_answers/10/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-012",
+      "legacy_id": "REQ-012",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A16",
+      "name": "冗長化要件",
+      "legacy_yaml_path": "availability",
+      "raw_target": "/question_answers/11/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-013",
+      "legacy_id": "REQ-013",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A17",
+      "name": "必要帯域",
+      "legacy_yaml_path": "sites[*].primary_circuit.bandwidth_mbps",
+      "raw_target": "/question_answers/12/raw_value",
+      "normalized_section": "links",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-014",
+      "legacy_id": "REQ-014",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A18",
+      "name": "遅延・損失要件",
+      "legacy_yaml_path": "performance",
+      "raw_target": "/question_answers/13/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-015",
+      "legacy_id": "REQ-015",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A19",
+      "name": "WAN方式",
+      "legacy_yaml_path": "sites[*].primary_circuit.type",
+      "raw_target": "/question_answers/14/raw_value",
+      "normalized_section": "links",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-016",
+      "legacy_id": "REQ-016",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A20",
+      "name": "VLAN・セグメント要件",
+      "legacy_yaml_path": "segmentation",
+      "raw_target": "/question_answers/15/raw_value",
+      "normalized_section": "networks",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-017",
+      "legacy_id": "REQ-017",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A21",
+      "name": "ルーティング要件",
+      "legacy_yaml_path": "routing",
+      "raw_target": "/question_answers/16/raw_value",
+      "normalized_section": "routes",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-018",
+      "legacy_id": "REQ-018",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A22",
+      "name": "セキュリティゾーン",
+      "legacy_yaml_path": "segmentation.security_zones",
+      "raw_target": "/question_answers/17/raw_value",
+      "normalized_section": "networks",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-019",
+      "legacy_id": "REQ-019",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A23",
+      "name": "通信制御方針",
+      "legacy_yaml_path": "security.policy_model",
+      "raw_target": "/question_answers/18/raw_value",
+      "normalized_section": "flows",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-020",
+      "legacy_id": "REQ-020",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A24",
+      "name": "管理者認証",
+      "legacy_yaml_path": "security.aaa_method",
+      "raw_target": "/question_answers/19/raw_value",
+      "normalized_section": "authentication",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-021",
+      "legacy_id": "REQ-021",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A25",
+      "name": "監視要件",
+      "legacy_yaml_path": "operations.monitoring_required",
+      "raw_target": "/question_answers/20/raw_value",
+      "normalized_section": "operations",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-022",
+      "legacy_id": "REQ-022",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A26",
+      "name": "ログ保管要件",
+      "legacy_yaml_path": "operations.log_retention_days",
+      "raw_target": "/question_answers/21/raw_value",
+      "normalized_section": "operations",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-023",
+      "legacy_id": "REQ-023",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A27",
+      "name": "バックアップ要件",
+      "legacy_yaml_path": "operations.config_backup_frequency",
+      "raw_target": "/question_answers/22/raw_value",
+      "normalized_section": "operations",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-024",
+      "legacy_id": "REQ-024",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A28",
+      "name": "停止可能時間",
+      "legacy_yaml_path": "migration.allowable_downtime_minutes",
+      "raw_target": "/question_answers/23/raw_value",
+      "normalized_section": "work_steps",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-025",
+      "legacy_id": "REQ-025",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A29",
+      "name": "ロールバック条件",
+      "legacy_yaml_path": "migration.rollback_criteria",
+      "raw_target": "/question_answers/24/raw_value",
+      "normalized_section": "work_steps",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-026",
+      "legacy_id": "REQ-026",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A30",
+      "name": "採用製品・バージョン",
+      "legacy_yaml_path": "platforms",
+      "raw_target": "/question_answers/25/raw_value",
+      "normalized_section": "devices",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-027",
+      "legacy_id": "REQ-027",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A31",
+      "name": "社内・顧客標準",
+      "legacy_yaml_path": "scope.constraints",
+      "raw_target": "/question_answers/26/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-028",
+      "legacy_id": "REQ-028",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A32",
+      "name": "必要成果物",
+      "legacy_yaml_path": "deliverables_required",
+      "raw_target": "/question_answers/27/raw_value",
+      "normalized_section": "artifacts",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-029",
+      "legacy_id": "REQ-029",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A33",
+      "name": "PC台数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/28/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-030",
+      "legacy_id": "REQ-030",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A34",
+      "name": "IP電話台数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/29/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-031",
+      "legacy_id": "REQ-031",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A35",
+      "name": "無線端末数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/30/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-032",
+      "legacy_id": "REQ-032",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A36",
+      "name": "サーバ接続数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/31/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-033",
+      "legacy_id": "REQ-033",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A37",
+      "name": "その他端末数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/32/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-034",
+      "legacy_id": "REQ-034",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A38",
+      "name": "同時利用率",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/33/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-035",
+      "legacy_id": "REQ-035",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A39",
+      "name": "有線収容ポート数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/34/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-036",
+      "legacy_id": "REQ-036",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A40",
+      "name": "PoE収容数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/35/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-037",
+      "legacy_id": "REQ-037",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A41",
+      "name": "利用アプリケーション",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/36/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-038",
+      "legacy_id": "REQ-038",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A42",
+      "name": "Web会議利用",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/37/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-039",
+      "legacy_id": "REQ-039",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A43",
+      "name": "ファイルサーバ通信",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/38/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-040",
+      "legacy_id": "REQ-040",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A44",
+      "name": "音声通信",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/39/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-041",
+      "legacy_id": "REQ-041",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A45",
+      "name": "映像通信",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/40/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-042",
+      "legacy_id": "REQ-042",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A46",
+      "name": "クラウド通信",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/41/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-043",
+      "legacy_id": "REQ-043",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A47",
+      "name": "ピーク時間帯",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/42/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-044",
+      "legacy_id": "REQ-044",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A48",
+      "name": "実測トラフィック",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/43/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-045",
+      "legacy_id": "REQ-045",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A49",
+      "name": "設計期間",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/44/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-046",
+      "legacy_id": "REQ-046",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A50",
+      "name": "将来増加率",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/45/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-047",
+      "legacy_id": "REQ-047",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A51",
+      "name": "性能余裕率",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/46/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-048",
+      "legacy_id": "REQ-048",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A52",
+      "name": "ポート予備率",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/47/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-049",
+      "legacy_id": "REQ-049",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A53",
+      "name": "片系故障時性能",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/48/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-050",
+      "legacy_id": "REQ-050",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A54",
+      "name": "拡張方法",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/49/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-051",
+      "legacy_id": "REQ-051",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A55",
+      "name": "Firewall通過帯域",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/50/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-052",
+      "legacy_id": "REQ-052",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A56",
+      "name": "最大同時セッション数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/51/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-053",
+      "legacy_id": "REQ-053",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A57",
+      "name": "新規セッション生成数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/52/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-054",
+      "legacy_id": "REQ-054",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A58",
+      "name": "IPS利用",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/53/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-055",
+      "legacy_id": "REQ-055",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A59",
+      "name": "URLフィルタ利用",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/54/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-056",
+      "legacy_id": "REQ-056",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A60",
+      "name": "マルウェア対策",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/55/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-057",
+      "legacy_id": "REQ-057",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A61",
+      "name": "SSL復号",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/56/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-058",
+      "legacy_id": "REQ-058",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A62",
+      "name": "VPN要件",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/57/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-059",
+      "legacy_id": "REQ-059",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A63",
+      "name": "Firewall冗長方式",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/58/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-060",
+      "legacy_id": "REQ-060",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A64",
+      "name": "無線利用エリア",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/59/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-061",
+      "legacy_id": "REQ-061",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A65",
+      "name": "最大同時接続数",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/60/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-062",
+      "legacy_id": "REQ-062",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A66",
+      "name": "高密度エリア",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/61/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-063",
+      "legacy_id": "REQ-063",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A67",
+      "name": "無線アプリケーション",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/62/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-064",
+      "legacy_id": "REQ-064",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A68",
+      "name": "無線可用性",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/63/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-065",
+      "legacy_id": "REQ-065",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A69",
+      "name": "PoE要件",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/64/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-066",
+      "legacy_id": "REQ-066",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A70",
+      "name": "予算上限",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/65/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-067",
+      "legacy_id": "REQ-067",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A71",
+      "name": "評価方針",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/66/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-068",
+      "legacy_id": "REQ-068",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A72",
+      "name": "TCO評価期間",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/67/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-069",
+      "legacy_id": "REQ-069",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A73",
+      "name": "保守レベル",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/68/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-070",
+      "legacy_id": "REQ-070",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A74",
+      "name": "ライセンス条件",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/69/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-071",
+      "legacy_id": "REQ-071",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A75",
+      "name": "ベンダー制約",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/70/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    },
+    {
+      "question_id": "Q-072",
+      "legacy_id": "REQ-072",
+      "source_file": "02_DesignAssets/Requirements/01_Template/NW要件ヒアリングシート.xlsx",
+      "source_cell": "A76",
+      "name": "製品ライフサイクル",
+      "legacy_yaml_path": null,
+      "raw_target": "/question_answers/71/raw_value",
+      "normalized_section": "requirements",
+      "transform": "元の回答・単位・根拠を保持。複数拠点・機器はscope_idsで分割し、意味と型を確認して対応セクションへ正規化。未対応の個別設問は案件要件として保持し、値を破棄しない。"
+    }
+  ],
+  "field_definitions": [
+    {
+      "field_id": "FIELD-001",
+      "legacy_id": "REQ-001",
+      "legacy_yaml_path": "metadata.project_name"
+    },
+    {
+      "field_id": "FIELD-002",
+      "legacy_id": "REQ-002",
+      "legacy_yaml_path": "metadata.customer_name"
+    },
+    {
+      "field_id": "FIELD-003",
+      "legacy_id": "REQ-003",
+      "legacy_yaml_path": "scope.network_domains"
+    },
+    {
+      "field_id": "FIELD-004",
+      "legacy_id": "REQ-004",
+      "legacy_yaml_path": "sites"
+    },
+    {
+      "field_id": "FIELD-005",
+      "legacy_id": "REQ-005",
+      "legacy_yaml_path": "communications"
+    },
+    {
+      "field_id": "FIELD-006",
+      "legacy_id": "REQ-006",
+      "legacy_yaml_path": "availability.target_sla_percent"
+    },
+    {
+      "field_id": "FIELD-007",
+      "legacy_id": "REQ-007",
+      "legacy_yaml_path": "addressing.private_address_policy"
+    },
+    {
+      "field_id": "FIELD-008",
+      "legacy_id": "REQ-008",
+      "legacy_yaml_path": "segmentation.required_segments"
+    },
+    {
+      "field_id": "FIELD-009",
+      "legacy_id": "REQ-009",
+      "legacy_yaml_path": "routing.protocols"
+    },
+    {
+      "field_id": "FIELD-010",
+      "legacy_id": "REQ-010",
+      "legacy_yaml_path": "security.policy_model"
+    },
+    {
+      "field_id": "FIELD-011",
+      "legacy_id": "REQ-011",
+      "legacy_yaml_path": "operations.monitoring_required"
+    },
+    {
+      "field_id": "FIELD-012",
+      "legacy_id": "REQ-012",
+      "legacy_yaml_path": "operations.log_retention_days"
+    },
+    {
+      "field_id": "FIELD-013",
+      "legacy_id": "REQ-013",
+      "legacy_yaml_path": "migration.allowable_downtime_minutes"
+    },
+    {
+      "field_id": "FIELD-014",
+      "legacy_id": "REQ-014",
+      "legacy_yaml_path": "platforms"
+    },
+    {
+      "field_id": "FIELD-015",
+      "legacy_id": "REQ-015",
+      "legacy_yaml_path": "deliverables_required"
+    },
+    {
+      "field_id": "FIELD-016",
+      "legacy_id": "REQ-016",
+      "legacy_yaml_path": "open_issues"
+    }
+  ],
+  "legacy_default_policy": "既存YAMLのgrowth_years=5、protocol=TCP等は例示値。資料や確認記録のない初期値を案件の確定値として取り込まない。"
+}

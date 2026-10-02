@@ -1,0 +1,191 @@
+# NW要件入力テンプレート
+# 値が未確定の場合は null を設定し、open_issues に課題として登録してください。
+schema_version: "1.0"
+metadata:
+  requirement_set_id: "REQSET-0001"
+  project_name: ""
+  customer_name: ""
+  status: "draft"  # draft / under_review / approved
+  version: "0.1"
+  created_date: ""  # YYYY-MM-DD
+  owner: ""
+  reviewer: ""
+  approver: ""
+  confidentiality: "internal"  # public / internal / confidential / restricted
+  source_documents: []
+
+scope:
+  target_phase: []  # requirement / basic_design / detailed_design / migration / operation
+  network_domains: []  # LAN / WAN / Internet / Security / Wireless / Cloud / DC
+  in_scope: []
+  out_of_scope: []
+  assumptions: []
+  constraints: []
+
+current_environment:
+  exists: null
+  overview: ""
+  issues: []
+  existing_documents: []
+  existing_devices: []
+
+sites:
+  - site_id: "SITE-001"
+    site_name: ""
+    site_type: ""
+    location: ""
+    timezone: "Asia/Tokyo"
+    users_normal: null
+    users_peak: null
+    endpoints: null
+    servers: null
+    wireless_aps: null
+    business_hours: ""
+    criticality: "high"
+    primary_circuit:
+      type: ""
+      bandwidth_mbps: null
+      carrier: ""
+    backup_circuit:
+      required: null
+      type: ""
+      bandwidth_mbps: null
+    internet_breakout: null
+    availability_requirement: ""
+    installation_constraints: []
+
+addressing:
+  ipv4_required: true
+  ipv6_required: null
+  private_address_policy: ""
+  reserved_ranges: []
+  summarization_policy: ""
+  dhcp_required: null
+  dns_servers: []
+  ipam_system: ""
+
+segmentation:
+  vlan_policy: ""
+  required_segments: []
+  vrf_required: null
+  vrfs: []
+  security_zones: []
+
+routing:
+  protocols: []  # static / OSPF / BGP / other
+  default_route_policy: ""
+  route_summarization: ""
+  redistribution_policy: ""
+  external_asn: null
+  internal_asn: null
+
+security:
+  policy_model: "allowlist"
+  firewall_required: null
+  ids_ips_required: null
+  web_filter_required: null
+  dns_security_required: null
+  nat_required: null
+  admin_access_sources: []
+  aaa_method: []
+  mfa_required: null
+  encryption_requirements: []
+  prohibited_services: []
+
+wireless:
+  required: null
+  ssids: []
+  authentication: ""
+  guest_access_required: null
+  coverage_requirements: []
+
+performance:
+  growth_years: 5
+  growth_rate_percent: null
+  latency_max_ms: null
+  packet_loss_max_percent: null
+  major_traffic_classes: []
+  qos_required: null
+
+availability:
+  target_sla_percent: null
+  max_planned_downtime_minutes: null
+  max_unplanned_downtime_minutes: null
+  device_redundancy: null
+  link_redundancy: null
+  power_redundancy: null
+  path_redundancy: null
+  failover_requirements: []
+
+operations:
+  monitoring_required: true
+  monitoring_system: ""
+  monitored_items: []
+  notification_destinations: []
+  syslog_required: true
+  log_retention_days: null
+  ntp_servers: []
+  snmp_version: "SNMPv3"
+  config_backup_frequency: ""
+  config_backup_destination: ""
+  maintenance_window: ""
+  support_hours: ""
+
+migration:
+  migration_required: null
+  preferred_window: ""
+  allowable_downtime_minutes: null
+  rollback_deadline_minutes: null
+  rollback_criteria: []
+  dependencies: []
+
+platforms:
+  - vendor: ""
+    product_family: ""
+    model: ""
+    software_name: ""
+    software_version: ""
+    license: ""
+    required_features: []
+
+communications:
+  - communication_id: "COMM-0001"
+    purpose: ""
+    source: ""
+    destination: ""
+    protocol: "TCP"
+    destination_ports: []
+    action: "allow"
+    nat_required: null
+    logging_required: true
+    bandwidth_mbps: null
+    latency_max_ms: null
+
+deliverables_required:
+  requirements_document: true
+  basic_design: true
+  detailed_design: true
+  network_diagram: true
+  parameter_sheets: true
+  configurations: true
+  test_plan: true
+  test_specification: true
+  migration_plan: true
+  construction_procedure: true
+  operation_document: true
+
+open_issues:
+  - issue_id: "ISS-001"
+    related_requirement_id: ""
+    title: ""
+    owner: ""
+    due_date: ""
+    status: "open"
+    impact: ""
+
+approval:
+  requirement_review_completed: false
+  security_review_completed: false
+  operations_review_completed: false
+  exceptions_approved: false
+  approved_date: ""
